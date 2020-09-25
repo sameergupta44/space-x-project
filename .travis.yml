@@ -2,9 +2,12 @@ language: node_js
 node_js:
  - "10.16.0"
 
-branches:
-  only:
-    - master
+stages:
+  - name: test_FE
+
+# branches:
+#   only:
+#     - master
 
 addons:
   chrome: stable
@@ -16,5 +19,8 @@ cache:
   directories:
     - node_modules
 
-script:
-  - npm run test-github
+jobs:
+  include:
+    - stage: test_FE
+      before_script: skip
+      script: npm run test-github
