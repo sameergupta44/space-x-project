@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-  private HOST_NAME = 'https:/api.spaceXdata.com';
+  private HOST_NAME = 'https://api.spaceXdata.com';
 
   constructor(private http: HttpClient) { }
 
