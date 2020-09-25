@@ -1,24 +1,20 @@
-# This file is a template, and might need editing before it works on your project.
-# Official framework image. Look for the different tagged releases at:
-# https://hub.docker.com/r/library/node/tags/
-#image: node:latest
-# image: weboaks/node-karma-protractor-chrome
-image: trion/ng-cli-karma
+language: node_js
+node_js:
+ - "8.11"
 
-stages:
-  - build_FE
-  - test_FE
+branches:
+  only:
+    - master
+
+addons:
+  chrome: stable
+
+before_script:
+  - npm install
 
 cache:
-  paths:
-     - node_modules/
+  directories:
+    - node_modules
 
-install_dependencies_FE:
-  stage: build_FE
-  script:
-   - npm install
-
-testing_phase_FE:
-  stage: test_FE
-  script:
-   - npm run test-github
+script:
+  - npm run test-github
