@@ -5,9 +5,9 @@ node_js:
  stages:
  - name: test_FE
 
-branches:
-  only:
-    - master
+# branches:
+#   only:
+#     - master
 
 addons:
   chrome: stable
