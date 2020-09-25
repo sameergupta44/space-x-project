@@ -1,0 +1,133 @@
+.side-bar {
+  // width: 200px;
+
+  .heading-container{
+    text-align: center;
+    .sub-heading {
+      font-weight: 600;
+      font-size: 12px;
+      border-bottom: 1px solid black;
+    }
+
+    .year-list {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 5px;
+
+      .year-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        padding: 0 10px;
+
+        .year-left{
+          padding: 5px 0;
+          width: 50%;
+
+          span {
+            background-color: lightgreen;
+            padding: 5px;
+
+            &:hover{
+              cursor: pointer;
+              background-color: green;
+            }
+          }
+        }
+        .year-right{
+          padding: 5px 0;
+          width: 50%;
+
+          span {
+            background-color: lightgreen;
+            padding: 5px;
+
+            &:hover{
+              cursor: pointer;
+              background-color: green;
+            }
+          }
+        }
+      }
+
+    }
+
+    .launch-wrapper{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 5px;
+      padding: 0 10px;
+
+      .launch-left{
+        padding: 5px 0;
+        width: 50%;
+
+        span {
+          background-color: lightgreen;
+          padding: 5px;
+
+          &:hover{
+            cursor: pointer;
+            background-color: green;
+          }
+        }
+      }
+      .launch-right{
+        padding: 5px 0;
+        width: 50%;
+
+        span {
+          background-color: lightgreen;
+          padding: 5px;
+
+          &:hover{
+            cursor: pointer;
+            background-color: green;
+          }
+        }
+      }
+    }
+
+    .landing-wrapper{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 5px;
+      padding: 0 10px;
+
+      .landing-left{
+        padding: 5px 0;
+        width: 50%;
+
+        span {
+          background-color: lightgreen;
+          padding: 5px;
+
+          &:hover{
+            cursor: pointer;
+            background-color: green;
+          }
+        }
+      }
+      .landing-right{
+        padding: 5px 0;
+        width: 50%;
+
+        span {
+          background-color: lightgreen;
+          padding: 5px;
+
+          &:hover{
+            cursor: pointer;
+            background-color: green;
+          }
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,38 @@
+@import '../variables';
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+
+  // @media screen and (max-width: $mobile) {
+  //   background-color: red;
+  // }
+
+  @include media($mobile) {
+    flex-direction: column;
+  }
+
+  .sidebar-container{
+    width: 15%;
+
+    @include media($small-desktop) {
+      width: 25%;
+    }
+
+    @include media($mobile) {
+      width: 100%;
+    }
+  }
+
+  .data-container{
+    width: 85%;
+
+    @include media($small-desktop) {
+      width: 75%;
+    }
+
+    @include media($mobile) {
+      width: 100%;
+    }
+  }
+}
