@@ -2,6 +2,9 @@ language: node_js
 node_js:
  - "10.16.0"
 
+ stages:
+ - name: test_FE
+
 branches:
   only:
     - master
@@ -16,5 +19,9 @@ cache:
   directories:
     - node_modules
 
-script:
-  - npm run test-github
+jobs:
+  include:
+  - stage: test_FE
+    install: skip
+    script: npm run test-github
+
