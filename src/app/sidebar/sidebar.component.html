@@ -4,28 +4,23 @@
     <span class="sub-heading">Launch Year</span>
     <div class="year-list">
         <span class="year-wrapper">
-          <span [ngClass]="{'year-left': i % 2 == 0 , 'year-right': i % 2 !== 0 }" *ngFor="let item of year; let i = index"><span> {{ item }} </span></span>
+          <span (click)="selectYear(item)" [ngClass]="{'year-left': i % 2 == 0 , 'year-right': i % 2 !== 0 }" *ngFor="let item of year; let i = index"><span> {{ item }} </span></span>
         </span>
     </div>
   </div>
-  <!-- <div class="year-list" *ngFor="let item of year">
-    <span class="year">{{ item }}</span>
-  </div> -->
-  <!-- <div class="year-list" *ngFor="let item of year">
-    <span class="year">{{ item }}</span>
-  </div> -->
+
   <div class="heading-container">
     <span class="sub-heading">Successful Launch</span>
     <span class="launch-wrapper">
-      <span class="launch-left"><span>True</span></span>
-      <span class="launch-right"><span>Talse</span></span>
+      <span class="launch-left" (click)="selectLaunch(true)"><span>True</span></span>
+      <span class="launch-right" (click)="selectLaunch(false)"><span>False</span></span>
     </span>
   </div>
   <div class="heading-container">
     <span class="sub-heading">Successful Landing</span>
     <span class="landing-wrapper">
-      <span class="landing-left"><span>True</span></span>
-      <span class="landing-right"><span>False</span></span>
+      <span class="landing-left" (click)="selectLanding(true)" ><span>True</span></span>
+      <span class="landing-right" (click)="selectLanding(false)"><span>False</span></span>
     </span>
   </div>
 </div>

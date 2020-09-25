@@ -19,8 +19,26 @@ export class AppComponent implements OnInit {
       console.log(this.spaceXdata);
     });
     this.year = new Array(15).fill(2006).map((_, idx) => '' + (_ + idx));
-    // this.year = [2006, 2008, 2010, 2012, 2014, 2016, 2018];
     console.log(this.year);
+  }
+
+  getYear(year) {
+    console.log(year);
+    this.dataService.getLaunchData(year).subscribe( data => {
+      this.spaceXdata = [];
+      this.spaceXdata = data;
+      console.log(this.spaceXdata);
+    });
+  }
+
+
+  getConfigObj(config) {
+      console.log(config);
+      this.dataService.getLaunchData(config).subscribe( data => {
+        this.spaceXdata = [];
+        this.spaceXdata = data;
+        console.log(this.spaceXdata);
+      });
   }
 
 

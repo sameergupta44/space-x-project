@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="flex-container">
   <div class="sidebar-container">
-    <app-sidebar [year]="year"></app-sidebar>
+    <app-sidebar (configObj)="getConfigObj($event)" [year]="year"></app-sidebar>
   </div>
   <div class="data-container">
     <app-display [spaceXdata]="spaceXdata"></app-display>

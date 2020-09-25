@@ -13,5 +13,18 @@ export class DataService {
   getInitialData(): Observable<any> {
     return this.http.get(this.HOST_NAME + '/v3/launches?limit=100');
   }
+  private buildURL(config): string {
+    let str = '';
+    str += '&launch_success=' + config.launch;
+    str += '&land_success=' + config.landing;
+    if (config.year !== '') {
+      str += '&launch_year=' + config.year;
+    }
+    return str;
+  }
+  getLaunchData(config): Observable<any> {
+    console.log(this.buildURL(config));
+    return this.http.get(this.HOST_NAME + '/v3/launches?limit=100' + this.buildURL(config));
+  }
 
 }
