@@ -3,12 +3,12 @@
 .flex-container {
   display: flex;
   flex-direction: row;
+  max-width: 1440px;
+  text-align: center;
+  margin: auto;
+  background-color: lightgrey;
 
-  // @media screen and (max-width: $mobile) {
-  //   background-color: red;
-  // }
-
-  @include media($mobile) {
+  @include media($tablet) {
     flex-direction: column;
   }
 
@@ -19,7 +19,7 @@
       width: 25%;
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
       width: 100%;
     }
   }
@@ -31,7 +31,7 @@
       width: 75%;
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
       width: 100%;
     }
   }

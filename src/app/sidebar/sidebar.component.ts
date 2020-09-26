@@ -12,8 +12,8 @@ export class SidebarComponent implements OnInit {
   @Output() configObj = new EventEmitter();
 
   config: any = {
-    launch: false,
-    landing: false,
+    launch: null,
+    landing: null,
     year: ''
   };
 
@@ -23,19 +23,31 @@ export class SidebarComponent implements OnInit {
   }
 
   selectYear(year) {
-    this.config.year = year;
+    if (this.config.year === '' + year) {
+      this.config.year = '';
+    } else {
+      this.config.year = year;
+    }
     console.log(this.config);
     this.configObj.emit(this.config);
   }
 
   selectLaunch(val) {
-    this.config.launch = val;
+    if (this.config.launch === val) {
+      this.config.launch = null;
+    } else {
+      this.config.launch = val;
+    }
     console.log(this.config);
     this.configObj.emit(this.config);
   }
 
   selectLanding(val) {
-    this.config.landing = val;
+    if (this.config.landing === val) {
+      this.config.landing = null;
+    } else {
+      this.config.landing = val;
+    }
     console.log(this.config);
     this.configObj.emit(this.config);
   }

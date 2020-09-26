@@ -15,8 +15,12 @@ export class DataService {
   }
   private buildURL(config): string {
     let str = '';
-    str += '&launch_success=' + config.launch;
-    str += '&land_success=' + config.landing;
+    if (config.launch !== null) {
+      str += '&launch_success=' + config.launch;
+    }
+    if (config.landing !== null) {
+      str += '&land_success=' + config.landing;
+    }
     if (config.year !== '') {
       str += '&launch_year=' + config.year;
     }

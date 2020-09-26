@@ -4,12 +4,12 @@
   </div>
   <div class="card-container">
     <span><b>{{ item.mission_name}} # {{item.flight_number}}</b></span>
-    <span><b>Mission Ids:</b> </span>
-    <ul>
+    <span *ngIf="item.mission_id.length"><b>Mission Ids:</b> </span>
+    <ul *ngIf="item.mission_id.length">
       <li *ngFor="let mId of item.mission_id"><span>{{ mId }}</span></li>
     </ul>
     <span><b>Launch Year:</b> {{ item.launch_year }} </span>
     <span><b>Successful Launch:</b> {{ item.launch_success }} </span>
-    <span><b>Successful Landing:</b> {{ item.launch_landing }} </span>
+    <span *ngIf="item.launch_landing"><b>Successful Landing:</b> {{ item.launch_landing }} </span>
   </div>
 </div>
