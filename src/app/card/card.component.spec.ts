@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardComponent } from './card.component';
+import { By } from '@angular/platform-browser';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -63,7 +64,34 @@ describe('CardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create card component', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show image tag in card', () => {
+    expect(fixture.debugElement.query(By.css('.img-container img'))).toBeTruthy();
+  });
+
+  it('should render correct card texts for "mission-id" ', () => {
+    const selector = '.card-container .mission-id b';
+    expect(fixture.debugElement.nativeElement.querySelector(selector).textContent).toContain('Mission Ids:');
+  });
+
+  it('should render correct card texts for "launch-year" ', () => {
+    const selector = '.card-container .launch-year b';
+    expect(fixture.debugElement.nativeElement.querySelector(selector).textContent).toContain('Launch Year:');
+  });
+
+  it('should render correct card texts for "success-launch" ', () => {
+    const selector = '.card-container .success-launch b';
+    expect(fixture.debugElement.nativeElement.querySelector(selector).textContent).toContain('Successful Launch:');
+  });
+
+  it('should render correct card texts for "success-landing" ', () => {
+    const selector = '.card-container .success-land b';
+    expect(fixture.debugElement.nativeElement.querySelector(selector).textContent).toContain('Successful Landing:');
+  });
+
+
+
 });

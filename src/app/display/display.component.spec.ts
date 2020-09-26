@@ -64,7 +64,7 @@ describe('DisplayComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create display component', () => {
     expect(component).toBeTruthy();
   });
 });

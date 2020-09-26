@@ -20,7 +20,22 @@ describe('SidebarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create sidebar component', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render true and false selectors for "successfull launch" ', () => {
+    const selectorLeft = '.side-bar-container .launch-wrapper .launch-left span';
+    const selectorRight = '.side-bar-container .launch-wrapper .launch-right span';
+    expect(fixture.debugElement.nativeElement.querySelector(selectorLeft).textContent).toContain('True');
+    expect(fixture.debugElement.nativeElement.querySelector(selectorRight).textContent).toContain('False');
+  });
+
+  it('should render true and false selectors for "successfull Landing" ', () => {
+    const selectorLeft = '.side-bar-container .landing-wrapper .landing-left span';
+    const selectorRight = '.side-bar-container .landing-wrapper .landing-right span';
+    expect(fixture.debugElement.nativeElement.querySelector(selectorLeft).textContent).toContain('True');
+    expect(fixture.debugElement.nativeElement.querySelector(selectorRight).textContent).toContain('False');
+  });
+
 });

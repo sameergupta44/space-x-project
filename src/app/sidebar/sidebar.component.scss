@@ -50,13 +50,15 @@
 
             &:hover{
               cursor: pointer;
-              background-color: green;
+              background-color: #90ED04;
             }
           }
 
           .active{
             background-color: darkgreen;
-            // color: white;
+            &:hover {
+            background-color: darkgreen;
+          }
           }
         }
         .year-right{
@@ -71,13 +73,15 @@
 
             &:hover{
               cursor: pointer;
-              background-color: green;
+              background-color: #90ED04;
             }
           }
 
           .active{
             background-color: darkgreen;
-            // color: white;
+            &:hover {
+            background-color: darkgreen;
+          }
           }
         }
       }
@@ -102,13 +106,15 @@
 
           &:hover{
             cursor: pointer;
-            background-color: green;
+            background-color: #90ED04;
           }
         }
 
         .active{
           background-color: darkgreen;
-          // color: white;
+          &:hover {
+            background-color: darkgreen;
+          }
         }
       }
       .launch-right{
@@ -122,13 +128,15 @@
 
           &:hover{
             cursor: pointer;
-            background-color: green;
+            background-color: #90ED04;
           }
         }
 
         .active{
           background-color: darkgreen;
-          // color: white;
+          &:hover {
+            background-color: darkgreen;
+          }
         }
       }
     }
@@ -151,13 +159,15 @@
 
           &:hover{
             cursor: pointer;
-            background-color: green;
+            background-color: #90ED04;
           }
         }
 
         .active{
           background-color: darkgreen;
-          // color: white;
+          &:hover {
+            background-color: darkgreen;
+          }
         }
 
 
@@ -173,13 +183,15 @@
 
           &:hover{
             cursor: pointer;
-            background-color: green;
+            background-color: #90ED04;
           }
         }
 
         .active{
           background-color: darkgreen;
-          // color: white;
+          &:hover {
+            background-color: darkgreen;
+          }
         }
 
       }

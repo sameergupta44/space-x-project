@@ -6,6 +6,7 @@
   margin: 5px;
   background-color: white;
   border-radius: 5px;
+  cursor: pointer;
 
   @include media($large-desktop) {
     max-width: 190px;
@@ -37,8 +38,8 @@
   .card-container {
     display: flex;
     flex-direction: column;
-    padding: 2px 16px;
-    min-height: 120px;
+    padding: 2px 5px;
+    min-height: 150px;
     text-align: left;
 
     ul {

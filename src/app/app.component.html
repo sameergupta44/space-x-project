@@ -1,4 +1,7 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
+  <header>
+    <h1>SpaceX Launch Programs</h1>
+  </header>
 <div class="flex-container">
   <div class="sidebar-container">
     <app-sidebar (configObj)="getConfigObj($event)" [year]="year"></app-sidebar>
@@ -6,5 +9,4 @@
   <div class="data-container">
     <app-display [spaceXdata]="spaceXdata"></app-display>
   </div>
-  <!-- <router-outlet></router-outlet> -->
 </div>
