@@ -104,11 +104,11 @@
             cursor: pointer;
             background-color: green;
           }
+        }
 
-          .active{
-            background-color: darkgreen;
-            // color: white;
-          }
+        .active{
+          background-color: darkgreen;
+          // color: white;
         }
       }
       .launch-right{
@@ -154,6 +154,13 @@
             background-color: green;
           }
         }
+
+        .active{
+          background-color: darkgreen;
+          // color: white;
+        }
+
+
       }
       .landing-right{
         padding: 5px 0;
@@ -169,6 +176,12 @@
             background-color: green;
           }
         }
+
+        .active{
+          background-color: darkgreen;
+          // color: white;
+        }
+
       }
     }
 
