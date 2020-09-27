@@ -10,6 +10,6 @@
     </ul>
     <span class="launch-year"><b>Launch Year:</b> {{ item.launch_year }} </span>
     <span class="success-launch"><b>Successful Launch:</b> {{ item.launch_success }} </span>
-    <span class="success-land"><b>Successful Landing:</b> {{ item.rocket.first_stage.cores[0].land_success }} </span>
+    <span class="success-land"><b>Successful Landing:</b> {{ (item.rocket)?.first_stage.cores[0].land_success }} </span>
   </div>
 </div>
